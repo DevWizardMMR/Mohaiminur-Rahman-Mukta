@@ -33,15 +33,17 @@ export default function RootLayout({ children }) {
         <Header />
         <div className="drawer lg:drawer-open mb-10 min-h-[calc(100vh-200px)]">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-          <div className="drawer-content flex flex-col items-end justify-start w-11/12 mx-auto">
-            <label htmlFor="my-drawer-2" className="p-5 shadow-md rounded-md z-40 lg:hidden">
+          <div className="drawer-content flex flex-col items-end justify-start w-11/12 mx-auto my-3">
+            <label htmlFor="my-drawer-2" className="p-5 shadow-md rounded-md z-30 lg:hidden">
               <FaBars />
             </label>
+            <div className="w-full">
             {children}
+            </div>
           </div>
           <div className="drawer-side">
             <label htmlFor="my-drawer-2" className="drawer-overlay bg-white"></label>
-            <ul className="menu p-4 w-80 h-full lg:border-r bg-white border-black text-base-content">
+            <ul className="menu p-4 w-80 h-full lg:border-r lg:z-30 bg-white mt-1 border-slate-400 text-base-content font-bold">
               {/* Sidebar content here */}
               <div className="flex flex-wrap justify-start items-center gap-4 mb-5">
                 <Image className="w-20 rounded-full shadow-md" src={Neha} />
@@ -64,7 +66,7 @@ export default function RootLayout({ children }) {
               </li>
               <div className="border-y border-black">
                 <li>
-                  <Link href="/">
+                  <Link href="/schedules">
                     <AiFillCalendar /> Schedules
                   </Link>
                 </li>
