@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link href="/services">
                     <FaUserEdit /> Services
                   </Link>
                 </li>
